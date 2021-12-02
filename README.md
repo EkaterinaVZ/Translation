@@ -1,15 +1,8 @@
 # Translation
-Hugging Face's logo
-Hugging Face
-Search models, datasets, users...
-Models
-Datasets
-Spaces
-Resources
-Solutions
-Pricing
-Log In
+
+
 Language Technology Research Group at the University of Helsinki's picture
+
 Helsinki-NLP
 /
 opus-mt-en-ru Copied
