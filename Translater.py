@@ -1,4 +1,17 @@
+from fastapi import FastAPI
 from transformers import pipeline
+from pydantic import BaseModel
 
-translator = pipeline("translation_en_to_ru", "Helsinki-NLP/opus-mt-en-ru")
-translator("Get team access controls and discussions for your contributors in an organization")
+class Item(BaseModel):
+    text: str
+
+app = FastAPI()
+classifier = pipeline("sentiment-analysis")
+
+@app.get("/")
+def root():
+    return {"message": "Hello World"}
+
+@app.post("/predict/")
+def predict(item: Item):
+    return classifier(item.text)[0]
